@@ -1,0 +1,151 @@
+/* This file aliases Radix Themes color tokens to your custom palettes.
+   It assumes customColours.css defines:
+   --novaBlue-1â€¦12, --novaBlue-a1â€¦a12, --novaBlue-surface/indicator/track/contrast
+   --novaGreen-â€¦ , --novaPink-â€¦ , --novaBlack-â€¦
+*/
+
+.radix-themes {
+    /* ---------------- Gray â†’ novaBlack (neutral) ---------------- */
+    --default-font-family: var(--font-geist);
+    letter-spacing: -0.02em;
+    --font-weight-bold: 700;
+    --font-weight-semibold: 700;
+  
+    --gray-1: var(--novaBlack-1);
+    --gray-2: var(--novaBlack-2);
+    --gray-3: var(--novaBlack-3);
+    --gray-4: var(--novaBlack-4);
+    --gray-5: var(--novaBlack-5);
+    --gray-6: var(--novaBlack-6);
+    --gray-7: var(--novaBlack-7);
+    --gray-8: var(--novaBlack-8);
+    --gray-9: var(--novaBlack-9);
+    --gray-10: var(--novaBlack-10);
+    --gray-11: var(--novaBlack-11);
+    --gray-12: var(--novaBlack-12);
+  
+    --gray-a1: var(--novaBlack-a1);
+    --gray-a2: var(--novaBlack-a2);
+    --gray-a3: var(--novaBlack-a3);
+    --gray-a4: var(--novaBlack-a4);
+    --gray-a5: var(--novaBlack-a5);
+    --gray-a6: var(--novaBlack-a6);
+    --gray-a7: var(--novaBlack-a7);
+    --gray-a8: var(--novaBlack-a8);
+    --gray-a9: var(--novaBlack-a9);
+    --gray-a10: var(--novaBlack-a10);
+    --gray-a11: var(--novaBlack-a11);
+    --gray-a12: var(--novaBlack-a12);
+  
+    --gray-surface: var(--novaBlack-surface);
+    --gray-indicator: var(--novaBlack-indicator);
+    --gray-track: var(--novaBlack-track);
+    --gray-contrast: var(--novaBlack-contrast);
+  
+    /* ---------------- Blue â†’ novaBlue (accent) ---------------- */
+  
+    --blue-1: var(--novaBlue-1);
+    --blue-2: var(--novaBlue-2);
+    --blue-3: var(--novaBlue-3);
+    --blue-4: var(--novaBlue-4);
+    --blue-5: var(--novaBlue-5);
+    --blue-6: var(--novaBlue-6);
+    --blue-7: var(--novaBlue-7);
+    --blue-8: var(--novaBlue-8);
+    --blue-9: var(--novaBlue-9);
+    --blue-10: var(--novaBlue-10);
+    --blue-11: var(--novaBlue-11);
+    --blue-12: var(--novaBlue-12);
+  
+    --blue-a1: var(--novaBlue-a1);
+    --blue-a2: var(--novaBlue-a2);
+    --blue-a3: var(--novaBlue-a3);
+    --blue-a4: var(--novaBlue-a4);
+    --blue-a5: var(--novaBlue-a5);
+    --blue-a6: var(--novaBlue-a6);
+    --blue-a7: var(--novaBlue-a7);
+    --blue-a8: var(--novaBlue-a8);
+    --blue-a9: var(--novaBlue-a9);
+    --blue-a10: var(--novaBlue-a10);
+    --blue-a11: var(--novaBlue-a11);
+    --blue-a12: var(--novaBlue-a12);
+  
+    --blue-surface: var(--novaBlue-surface);
+    --blue-indicator: var(--novaBlue-indicator);
+    --blue-track: var(--novaBlue-track);
+    --blue-contrast: var(--novaBlue-contrast);
+  
+    /* ---------------- Green â†’ novaGreen (success) ---------------- */
+  
+    --green-1: var(--novaGreen-1);
+    --green-2: var(--novaGreen-2);
+    --green-3: var(--novaGreen-3);
+    --green-4: var(--novaGreen-4);
+    --green-5: var(--novaGreen-5);
+    --green-6: var(--novaGreen-6);
+    --green-7: var(--novaGreen-7);
+    --green-8: var(--novaGreen-8);
+    --green-9: var(--novaGreen-9);
+    --green-10: var(--novaGreen-10);
+    --green-11: var(--novaGreen-11);
+    --green-12: var(--novaGreen-12);
+  
+    --green-a1: var(--novaGreen-a1);
+    --green-a2: var(--novaGreen-a2);
+    --green-a3: var(--novaGreen-a3);
+    --green-a4: var(--novaGreen-a4);
+    --green-a5: var(--novaGreen-a5);
+    --green-a6: var(--novaGreen-a6);
+    --green-a7: var(--novaGreen-a7);
+    --green-a8: var(--novaGreen-a8);
+    --green-a9: var(--novaGreen-a9);
+    --green-a10: var(--novaGreen-a10);
+    --green-a11: var(--novaGreen-a11);
+    --green-a12: var(--novaGreen-a12);
+  
+    --green-surface: var(--novaGreen-surface);
+    --green-indicator: var(--novaGreen-indicator);
+    --green-track: var(--novaGreen-track);
+    --green-contrast: var(--novaGreen-contrast);
+  
+    /* ---------------- Pink â†’ novaPink (extra accent) ---------------- */
+  
+    --pink-1: var(--novaPink-1);
+    --pink-2: var(--novaPink-2);
+    --pink-3: var(--novaPink-3);
+    --pink-4: var(--novaPink-4);
+    --pink-5: var(--novaPink-5);
+    --pink-6: var(--novaPink-6);
+    --pink-7: var(--novaPink-7);
+    --pink-8: var(--novaPink-8);
+    --pink-9: var(--novaPink-9);
+    --pink-10: var(--novaPink-10);
+    --pink-11: var(--novaPink-11);
+    --pink-12: var(--novaPink-12);
+  
+    --pink-a1: var(--novaPink-a1);
+    --pink-a2: var(--novaPink-a2);
+    --pink-a3: var(--novaPink-a3);
+    --pink-a4: var(--novaPink-a4);
+    --pink-a5: var(--novaPink-a5);
+    --pink-a6: var(--novaPink-a6);
+    --pink-a7: var(--novaPink-a7);
+    --pink-a8: var(--novaPink-a8);
+    --pink-a9: var(--novaPink-a9);
+    --pink-a10: var(--novaPink-a10);
+    --pink-a11: var(--novaPink-a11);
+    --pink-a12: var(--novaPink-a12);
+  
+    --pink-surface: var(--novaPink-surface);
+    --pink-indicator: var(--novaPink-indicator);
+    --pink-track: var(--novaPink-track);
+    --pink-contrast: var(--novaPink-contrast);
+  
+    --color-background: var(--gray-2);
+    --color-text: var(--gray-12);
+  }
+  
+  .no-date-icon input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }

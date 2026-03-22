@@ -1,0 +1,606 @@
+/* 
+ *
+ * Brand color scales for Novabook, from Radix Colors custom palette tool.
+ * These are pure "nova" tokens and do NOT use Radix names directly.
+ *
+ * - novaBlue   (light + dark)
+ * - novaGreen  (light + dark)
+ * - novaPink   (light + dark)
+ * - novaBlack  (light + dark)
+ */
+
+/* ========== LIGHT MODE ========== */
+
+/* novaGreen â€“ light */
+:root,
+.light,
+.light-theme {
+  --novaGreen-1: #fafefb;
+  --novaGreen-2: #f4fbf5;
+  --novaGreen-3: #dafcdf;
+  --novaGreen-4: #c2f9cb;
+  --novaGreen-5: #abf1b7;
+  --novaGreen-6: #94e5a3;
+  --novaGreen-7: #77d58b;
+  --novaGreen-8: #44c267;
+  --novaGreen-9: #00ed6a;
+  --novaGreen-10: #00e25f;
+  --novaGreen-11: #18853d;
+  --novaGreen-12: #1b4525;
+
+  --novaGreen-a1: #00cc3305;
+  --novaGreen-a2: #00a3180b;
+  --novaGreen-a3: #00eb2325;
+  --novaGreen-a4: #00e6263d;
+  --novaGreen-a5: #00d52554;
+  --novaGreen-a6: #01c2246b;
+  --novaGreen-a7: #00b12688;
+  --novaGreen-a8: #00ac30bb;
+  --novaGreen-a9: #00ed6a;
+  --novaGreen-a10: #00e25f;
+  --novaGreen-a11: #007829e7;
+  --novaGreen-a12: #002f0be4;
+
+  --novaGreen-contrast: #132717;
+  --novaGreen-surface: #f1faf3cc;
+  --novaGreen-indicator: #00ed6a;
+  --novaGreen-track: #00ed6a;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --novaGreen-1: oklch(99.3% 0.0054 149.2);
+      --novaGreen-2: oklch(98.2% 0.0122 149.2);
+      --novaGreen-3: oklch(96% 0.0523 149.2);
+      --novaGreen-4: oklch(93.2% 0.0832 149.2);
+      --novaGreen-5: oklch(89.8% 0.1058 149.2);
+      --novaGreen-6: oklch(85.3% 0.1221 149.2);
+      --novaGreen-7: oklch(79.5% 0.138 149.2);
+      --novaGreen-8: oklch(72.3% 0.1698 149.2);
+      --novaGreen-9: oklch(82.6% 0.232 149.2);
+      --novaGreen-10: oklch(79.4% 0.232 149.2);
+      --novaGreen-11: oklch(54.2% 0.1429 149.2);
+      --novaGreen-12: oklch(35.1% 0.0718 149.2);
+
+      --novaGreen-a1: color(display-p3 0.0235 0.7569 0.0235 / 0.016);
+      --novaGreen-a2: color(display-p3 0.0235 0.6118 0.0235 / 0.04);
+      --novaGreen-a3: color(display-p3 0.0039 0.8706 0.0039 / 0.118);
+      --novaGreen-a4: color(display-p3 0.0078 0.8431 0.0471 / 0.197);
+      --novaGreen-a5: color(display-p3 0.0039 0.7686 0.0314 / 0.271);
+      --novaGreen-a6: color(display-p3 0.0039 0.6863 0.0353 / 0.35);
+      --novaGreen-a7: color(display-p3 0.0039 0.6118 0.0392 / 0.444);
+      --novaGreen-a8: color(display-p3 0 0.5725 0.0431 / 0.585);
+      --novaGreen-a9: color(display-p3 0 0.851 0.0902 / 0.577);
+      --novaGreen-a10: color(display-p3 0 0.7882 0.0549 / 0.597);
+      --novaGreen-a11: color(display-p3 0 0.3529 0.0314 / 0.753);
+      --novaGreen-a12: color(display-p3 0 0.1373 0.0078 / 0.851);
+
+      --novaGreen-contrast: #132717;
+      --novaGreen-surface: color(display-p3 0.9529 0.9804 0.9529 / 0.8);
+      --novaGreen-indicator: oklch(82.6% 0.232 149.2);
+      --novaGreen-track: oklch(82.6% 0.232 149.2);
+    }
+  }
+}
+
+/* novaBlack â€“ light */
+:root,
+.light,
+.light-theme {
+  --novaBlack-1: #fcfcfc;
+  --novaBlack-2: #f9f9f9;
+  --novaBlack-3: #f0f0f0;
+  --novaBlack-4: #e8e8e8;
+  --novaBlack-5: #e1e1e1;
+  --novaBlack-6: #d9d9d9;
+  --novaBlack-7: #cecece;
+  --novaBlack-8: #bbb;
+  --novaBlack-9: #8c8c8c;
+  --novaBlack-10: #828282;
+  --novaBlack-11: #636363;
+  --novaBlack-12: #1f1f1f;
+
+  --novaBlack-a1: #00000003;
+  --novaBlack-a2: #00000006;
+  --novaBlack-a3: #0000000f;
+  --novaBlack-a4: #00000017;
+  --novaBlack-a5: #0000001e;
+  --novaBlack-a6: #00000026;
+  --novaBlack-a7: #00000031;
+  --novaBlack-a8: #00000044;
+  --novaBlack-a9: #00000073;
+  --novaBlack-a10: #0000007d;
+  --novaBlack-a11: #0000009c;
+  --novaBlack-a12: #000000e0;
+
+  --novaBlack-contrast: #ffffff;
+  --novaBlack-surface: #ffffffcc;
+  --novaBlack-indicator: #8c8c8c;
+  --novaBlack-track: #8c8c8c;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --novaBlack-1: oklch(99.2% 0 none);
+      --novaBlack-2: oklch(98.1% 0 none);
+      --novaBlack-3: oklch(95.5% 0 none);
+      --novaBlack-4: oklch(93.1% 0 none);
+      --novaBlack-5: oklch(90.9% 0 none);
+      --novaBlack-6: oklch(88.6% 0 none);
+      --novaBlack-7: oklch(85.2% 0 none);
+      --novaBlack-8: oklch(79.3% 0 none);
+      --novaBlack-9: oklch(64% 0 none);
+      --novaBlack-10: oklch(60.6% 0 none);
+      --novaBlack-11: oklch(50.1% 0 none);
+      --novaBlack-12: oklch(24% 0 none);
+
+      --novaBlack-a1: color(display-p3 0 0 0 / 0.0118);
+      --novaBlack-a2: color(display-p3 0 0 0 / 0.0235);
+      --novaBlack-a3: color(display-p3 0 0 0 / 0.0588);
+      --novaBlack-a4: color(display-p3 0 0 0 / 0.0902);
+      --novaBlack-a5: color(display-p3 0 0 0 / 0.1176);
+      --novaBlack-a6: color(display-p3 0 0 0 / 0.149);
+      --novaBlack-a7: color(display-p3 0 0 0 / 0.1922);
+      --novaBlack-a8: color(display-p3 0 0 0 / 0.2667);
+      --novaBlack-a9: color(display-p3 0 0 0 / 0.451);
+      --novaBlack-a10: color(display-p3 0 0 0 / 0.4902);
+      --novaBlack-a11: color(display-p3 0 0 0 / 0.6118);
+      --novaBlack-a12: color(display-p3 0 0 0 / 0.8784);
+
+      --novaBlack-contrast: #ffffff;
+      --novaBlack-surface: color(display-p3 1 1 1 / 80%);
+      --novaBlack-indicator: oklch(64% 0 none);
+      --novaBlack-track: oklch(64% 0 none);
+    }
+  }
+}
+
+/* novaBlue â€“ light */
+:root,
+.light,
+.light-theme {
+  --novaBlue-1: #fcfdff;
+  --novaBlue-2: #f6f9ff;
+  --novaBlue-3: #ebf2ff;
+  --novaBlue-4: #dbeaff;
+  --novaBlue-5: #cbdfff;
+  --novaBlue-6: #b8d1ff;
+  --novaBlue-7: #9dbeff;
+  --novaBlue-8: #7aa2ff;
+  --novaBlue-9: #2540ff;
+  --novaBlue-10: #1f38dd;
+  --novaBlue-11: #2a4cef;
+  --novaBlue-12: #15296d;
+
+  --novaBlue-a1: #0055ff03;
+  --novaBlue-a2: #0055ff09;
+  --novaBlue-a3: #005aff14;
+  --novaBlue-a4: #006bff24;
+  --novaBlue-a5: #0063ff34;
+  --novaBlue-a6: #005aff47;
+  --novaBlue-a7: #0056ff62;
+  --novaBlue-a8: #004dff85;
+  --novaBlue-a9: #0020ffda;
+  --novaBlue-a10: #001dd8e0;
+  --novaBlue-a11: #0029ecd5;
+  --novaBlue-a12: #001660ea;
+
+  --novaBlue-contrast: #fff;
+  --novaBlue-surface: #f4f8ffcc;
+  --novaBlue-indicator: #2540ff;
+  --novaBlue-track: #2540ff;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --novaBlue-1: oklch(99.4% 0.0021 266.9);
+      --novaBlue-2: oklch(98.3% 0.0114 266.9);
+      --novaBlue-3: oklch(96.1% 0.0243 266.9);
+      --novaBlue-4: oklch(93.5% 0.0479 266.9);
+      --novaBlue-5: oklch(90.3% 0.0725 266.9);
+      --novaBlue-6: oklch(86.3% 0.1012 266.9);
+      --novaBlue-7: oklch(80.7% 0.1231 266.9);
+      --novaBlue-8: oklch(73% 0.1605 266.9);
+      --novaBlue-9: oklch(50.8% 0.2756 266.9);
+      --novaBlue-10: oklch(45.8% 0.2449 266.9);
+      --novaBlue-11: oklch(51% 0.2449 266.9);
+      --novaBlue-12: oklch(31.3% 0.1213 266.9);
+
+      --novaBlue-a1: color(display-p3 0.0235 0.349 1 / 0.012);
+      --novaBlue-a2: color(display-p3 0.0196 0.2667 0.8784 / 0.032);
+      --novaBlue-a3: color(display-p3 0.0078 0.3216 0.949 / 0.075);
+      --novaBlue-a4: color(display-p3 0.0078 0.3686 0.9412 / 0.13);
+      --novaBlue-a5: color(display-p3 0.0078 0.3176 0.9412 / 0.189);
+      --novaBlue-a6: color(display-p3 0.0039 0.2902 0.9412 / 0.259);
+      --novaBlue-a7: color(display-p3 0.0039 0.2863 0.949 / 0.361);
+      --novaBlue-a8: color(display-p3 0.0039 0.251 0.9451 / 0.491);
+      --novaBlue-a9: color(display-p3 0 0.0941 0.9529 / 0.832);
+      --novaBlue-a10: color(display-p3 0 0.0824 0.8039 / 0.855);
+      --novaBlue-a11: color(display-p3 0 0.1216 0.8784 / 0.804);
+      --novaBlue-a12: color(display-p3 0 0.0627 0.3451 / 0.899);
+
+      --novaBlue-contrast: #fff;
+      --novaBlue-surface: color(display-p3 0.9608 0.9725 1 / 0.8);
+      --novaBlue-indicator: oklch(50.8% 0.2756 266.9);
+      --novaBlue-track: oklch(50.8% 0.2756 266.9);
+    }
+  }
+}
+
+/* novaPink â€“ light */
+:root,
+.light,
+.light-theme {
+  --novaPink-1: #fffcfe;
+  --novaPink-2: #fef7fc;
+  --novaPink-3: #ffe9f8;
+  --novaPink-4: #fddcf2;
+  --novaPink-5: #f8ceec;
+  --novaPink-6: #f2bee3;
+  --novaPink-7: #e8aad6;
+  --novaPink-8: #d396c2;
+  --novaPink-9: #a36993;
+  --novaPink-10: #955d86;
+  --novaPink-11: #905881;
+  --novaPink-12: #56234a;
+
+  --novaPink-a1: #ff00aa03;
+  --novaPink-a2: #e000a008;
+  --novaPink-a3: #ff00ae16;
+  --novaPink-a4: #f100a123;
+  --novaPink-a5: #db009d31;
+  --novaPink-a6: #cc009241;
+  --novaPink-a7: #ba008455;
+  --novaPink-a8: #95006b69;
+  --novaPink-a9: #63004896;
+  --novaPink-a10: #580041a2;
+  --novaPink-a11: #56003fa7;
+  --novaPink-a12: #3b002ddc;
+
+  --novaPink-contrast: #fff;
+  --novaPink-surface: #fef5fbcc;
+  --novaPink-indicator: #a36993;
+  --novaPink-track: #a36993;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --novaPink-1: oklch(99.4% 0.0048 337.2);
+      --novaPink-2: oklch(98.3% 0.0103 337.2);
+      --novaPink-3: oklch(95.6% 0.0303 337.2);
+      --novaPink-4: oklch(92.7% 0.047 337.2);
+      --novaPink-5: oklch(89.6% 0.0616 337.2);
+      --novaPink-6: oklch(85.8% 0.0768 337.2);
+      --novaPink-7: oklch(80.9% 0.0924 337.2);
+      --novaPink-8: oklch(74.6% 0.0924 337.2);
+      --novaPink-9: oklch(59.7% 0.0924 337.2);
+      --novaPink-10: oklch(55.4% 0.0924 337.2);
+      --novaPink-11: oklch(53.8% 0.0924 337.2);
+      --novaPink-12: oklch(34.3% 0.0924 337.2);
+
+      --novaPink-a1: color(display-p3 0.6745 0.0235 0.6745 / 0.012);
+      --novaPink-a2: color(display-p3 0.7569 0.0196 0.6353 / 0.032);
+      --novaPink-a3: color(display-p3 0.8118 0.0078 0.6235 / 0.083);
+      --novaPink-a4: color(display-p3 0.7961 0.0078 0.5922 / 0.134);
+      --novaPink-a5: color(display-p3 0.7059 0.0039 0.5569 / 0.185);
+      --novaPink-a6: color(display-p3 0.6706 0.0039 0.5294 / 0.248);
+      --novaPink-a7: color(display-p3 0.6118 0.0039 0.4784 / 0.322);
+      --novaPink-a8: color(display-p3 0.4824 0 0.3843 / 0.4);
+      --novaPink-a9: color(display-p3 0.3216 0 0.251 / 0.577);
+      --novaPink-a10: color(display-p3 0.2824 0 0.2275 / 0.624);
+      --novaPink-a11: color(display-p3 0.2745 0 0.2196 / 0.644);
+      --novaPink-a12: color(display-p3 0.1922 0 0.1569 / 0.851);
+
+      --novaPink-contrast: #fff;
+      --novaPink-surface: color(display-p3 0.9922 0.9608 0.9843 / 0.8);
+      --novaPink-indicator: oklch(59.7% 0.0924 337.2);
+      --novaPink-track: oklch(59.7% 0.0924 337.2);
+    }
+  }
+}
+
+/* ========== DARK MODE ========== */
+
+/* novaPink â€“ dark */
+.dark,
+.dark-theme {
+  --novaPink-1: #1a1117;
+  --novaPink-2: #21121d;
+  --novaPink-3: #37162f;
+  --novaPink-4: #49173e;
+  --novaPink-5: #542148;
+  --novaPink-6: #632f56;
+  --novaPink-7: #78426a;
+  --novaPink-8: #925a84;
+  --novaPink-9: #ffd4f2;
+  --novaPink-10: #f5cae8;
+  --novaPink-11: #e1a3d0;
+  --novaPink-12: #fcd1ef;
+
+  --novaPink-a1: #ef008207;
+  --novaPink-a2: #f100ad0f;
+  --novaPink-a3: #ff22ca26;
+  --novaPink-a4: #fe22cd3a;
+  --novaPink-a5: #fd43d146;
+  --novaPink-a6: #ff65d856;
+  --novaPink-a7: #fe80de6d;
+  --novaPink-a8: #ff97e589;
+  --novaPink-a9: #ffd4f2;
+  --novaPink-a10: #fed1f0f5;
+  --novaPink-a11: #feb7eadf;
+  --novaPink-a12: #ffd3f2fc;
+
+  --novaPink-contrast: #2e1a29;
+  --novaPink-surface: #2e112680;
+  --novaPink-indicator: #ffd4f2;
+  --novaPink-track: #ffd4f2;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark,
+    .dark-theme {
+      --novaPink-1: oklch(19.1% 0.0182 337.2);
+      --novaPink-2: oklch(20.7% 0.0327 337.2);
+      --novaPink-3: oklch(26.1% 0.0643 337.2);
+      --novaPink-4: oklch(29.9% 0.0924 337.2);
+      --novaPink-5: oklch(33.8% 0.0924 337.2);
+      --novaPink-6: oklch(38.9% 0.0924 337.2);
+      --novaPink-7: oklch(45.9% 0.0924 337.2);
+      --novaPink-8: oklch(54.5% 0.0924 337.2);
+      --novaPink-9: oklch(91.5% 0.0616 337.2);
+      --novaPink-10: oklch(88.6% 0.0616 337.2);
+      --novaPink-11: oklch(78.9% 0.0924 337.2);
+      --novaPink-12: oklch(90.5% 0.0616 337.2);
+
+      --novaPink-a1: color(display-p3 0.9725 0 0.6157 / 0.022);
+      --novaPink-a2: color(display-p3 1 0 0.749 / 0.047);
+      --novaPink-a3: color(display-p3 1 0.2 0.851 / 0.132);
+      --novaPink-a4: color(display-p3 1 0.1961 0.8627 / 0.2);
+      --novaPink-a5: color(display-p3 1 0.3333 0.8745 / 0.247);
+      --novaPink-a6: color(display-p3 1 0.4627 0.898 / 0.307);
+      --novaPink-a7: color(display-p3 1 0.5647 0.9137 / 0.396);
+      --novaPink-a8: color(display-p3 1 0.651 0.9373 / 0.503);
+      --novaPink-a9: color(display-p3 0.9961 0.8588 0.9647 / 0.971);
+      --novaPink-a10: color(display-p3 1 0.8588 0.9686 / 0.928);
+      --novaPink-a11: color(display-p3 1 0.7647 0.949 / 0.835);
+      --novaPink-a12: color(display-p3 1 0.8588 0.9647 / 0.958);
+
+      --novaPink-contrast: #2e1a29;
+      --novaPink-surface: color(display-p3 0.1647 0.0627 0.1412 / 0.5);
+      --novaPink-indicator: oklch(91.5% 0.0616 337.2);
+      --novaPink-track: oklch(91.5% 0.0616 337.2);
+    }
+  }
+}
+
+/* novaBlue â€“ dark */
+.dark,
+.dark-theme {
+  --novaBlue-1: #0d1324;
+  --novaBlue-2: #0f172c;
+  --novaBlue-3: #112157;
+  --novaBlue-4: #142876;
+  --novaBlue-5: #1a328b;
+  --novaBlue-6: #223d9d;
+  --novaBlue-7: #2a49b4;
+  --novaBlue-8: #3255d3;
+  --novaBlue-9: #2540ff;
+  --novaBlue-10: #1d29ed;
+  --novaBlue-11: #90b3ff;
+  --novaBlue-12: #cfe1ff;
+
+  --novaBlue-a1: #0006f712;
+  --novaBlue-a2: #0031f71b;
+  --novaBlue-a3: #0a42ff49;
+  --novaBlue-a4: #1443fd6b;
+  --novaBlue-a5: #204ffe82;
+  --novaBlue-a6: #2c5bff95;
+  --novaBlue-a7: #3562ffae;
+  --novaBlue-a8: #3963fed0;
+  --novaBlue-a9: #2540ff;
+  --novaBlue-a10: #1e2bffec;
+  --novaBlue-a11: #90b3ff;
+  --novaBlue-a12: #cfe1ff;
+
+  --novaBlue-contrast: #fff;
+  --novaBlue-surface: #0b1a4480;
+  --novaBlue-indicator: #2540ff;
+  --novaBlue-track: #2540ff;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark,
+    .dark-theme {
+      --novaBlue-1: oklch(19.1% 0.0356 266.9);
+      --novaBlue-2: oklch(20.9% 0.0435 266.9);
+      --novaBlue-3: oklch(27.2% 0.0999 266.9);
+      --novaBlue-4: oklch(31.9% 0.1344 266.9);
+      --novaBlue-5: oklch(36.2% 0.1507 266.9);
+      --novaBlue-6: oklch(40.4% 0.1594 266.9);
+      --novaBlue-7: oklch(45% 0.1734 266.9);
+      --novaBlue-8: oklch(50.3% 0.1979 266.9);
+      --novaBlue-9: oklch(50.8% 0.2756 266.9);
+      --novaBlue-10: oklch(45.8% 0.2756 266.9);
+      --novaBlue-11: oklch(77.7% 0.1778 266.9);
+      --novaBlue-12: oklch(91.1% 0.0617 266.9);
+
+      --novaBlue-a1: color(display-p3 0 0.0196 1 / 0.064);
+      --novaBlue-a2: color(display-p3 0 0.2039 1 / 0.094);
+      --novaBlue-a3: color(display-p3 0.0902 0.2627 0.9961 / 0.273);
+      --novaBlue-a4: color(display-p3 0.1294 0.2667 1 / 0.396);
+      --novaBlue-a5: color(display-p3 0.1765 0.3137 1 / 0.486);
+      --novaBlue-a6: color(display-p3 0.2196 0.3608 1 / 0.558);
+      --novaBlue-a7: color(display-p3 0.251 0.3882 1 / 0.656);
+      --novaBlue-a8: color(display-p3 0.2706 0.4039 1 / 0.779);
+      --novaBlue-a9: color(display-p3 0.1725 0.2549 1 / 0.958);
+      --novaBlue-a10: color(display-p3 0.1294 0.1725 1 / 0.886);
+      --novaBlue-a11: color(display-p3 0.6039 0.7137 0.9961 / 0.975);
+      --novaBlue-a12: color(display-p3 0.8353 0.8902 1 / 0.988);
+
+      --novaBlue-contrast: #fff;
+      --novaBlue-surface: color(display-p3 0.0549 0.102 0.251 / 0.5);
+      --novaBlue-indicator: oklch(50.8% 0.2756 266.9);
+      --novaBlue-track: oklch(50.8% 0.2756 266.9);
+    }
+  }
+}
+
+/* novaGreen â€“ dark */
+.dark,
+.dark-theme {
+  --novaGreen-1: #0e1610;
+  --novaGreen-2: #121c13;
+  --novaGreen-3: #112e18;
+  --novaGreen-4: #0a3d1a;
+  --novaGreen-5: #0e4b21;
+  --novaGreen-6: #165a2a;
+  --novaGreen-7: #1b6b33;
+  --novaGreen-8: #1d803d;
+  --novaGreen-9: #00ed6a;
+  --novaGreen-10: #00e25f;
+  --novaGreen-11: #00dd5b;
+  --novaGreen-12: #a8f5b6;
+
+  --novaGreen-a1: #00be0003;
+  --novaGreen-a2: #00f70009;
+  --novaGreen-a3: #00f9381d;
+  --novaGreen-a4: #00fd372d;
+  --novaGreen-a5: #00fe4c3c;
+  --novaGreen-a6: #1bff5e4c;
+  --novaGreen-a7: #26fd675f;
+  --novaGreen-a8: #27fd6d76;
+  --novaGreen-a9: #00ff71ec;
+  --novaGreen-a10: #00ff6ae0;
+  --novaGreen-a11: #00fe67db;
+  --novaGreen-a12: #aefebcf5;
+
+  --novaGreen-contrast: #132717;
+  --novaGreen-surface: #11241380;
+  --novaGreen-indicator: #00ed6a;
+  --novaGreen-track: #00ed6a;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark,
+    .dark-theme {
+      --novaGreen-1: oklch(19.1% 0.0178 149.2);
+      --novaGreen-2: oklch(21.3% 0.0224 149.2);
+      --novaGreen-3: oklch(27.2% 0.0543 149.2);
+      --novaGreen-4: oklch(31.8% 0.0802 149.2);
+      --novaGreen-5: oklch(36.5% 0.0924 149.2);
+      --novaGreen-6: oklch(41.3% 0.1025 149.2);
+      --novaGreen-7: oklch(46.7% 0.116 149.2);
+      --novaGreen-8: oklch(52.7% 0.1347 149.2);
+      --novaGreen-9: oklch(82.6% 0.232 149.2);
+      --novaGreen-10: oklch(79.4% 0.232 149.2);
+      --novaGreen-11: oklch(78% 0.232 149.2);
+      --novaGreen-12: oklch(90.5% 0.1159 149.2);
+
+      --novaGreen-a1: color(display-p3 0 0.9529 0 / 0.009);
+      --novaGreen-a2: color(display-p3 0.0784 0.9765 0.0784 / 0.035);
+      --novaGreen-a3: color(display-p3 0.2627 0.9961 0.302 / 0.107);
+      --novaGreen-a4: color(display-p3 0.2392 0.9961 0.3059 / 0.171);
+      --novaGreen-a5: color(display-p3 0.3176 1 0.3882 / 0.23);
+      --novaGreen-a6: color(display-p3 0.4 1 0.4392 / 0.294);
+      --novaGreen-a7: color(display-p3 0.4353 1 0.4784 / 0.362);
+      --novaGreen-a8: color(display-p3 0.4431 1 0.498 / 0.452);
+      --novaGreen-a9: color(display-p3 0.4588 1 0.5137 / 0.907);
+      --novaGreen-a10: color(display-p3 0.4549 1 0.4902 / 0.864);
+      --novaGreen-a11: color(display-p3 0.451 1 0.4824 / 0.843);
+      --novaGreen-a12: color(display-p3 0.7608 1 0.7686 / 0.949);
+
+      --novaGreen-contrast: #132717;
+      --novaGreen-surface: color(display-p3 0.0784 0.1412 0.0784 / 0.5);
+      --novaGreen-indicator: oklch(82.6% 0.232 149.2);
+      --novaGreen-track: oklch(82.6% 0.232 149.2);
+    }
+  }
+}
+
+/* novaBlack â€“ dark */
+.dark,
+.dark-theme {
+  --novaBlack-1: #141414;
+  --novaBlack-2: #1a1a1a;
+  --novaBlack-3: #232323;
+  --novaBlack-4: #2a2a2a;
+  --novaBlack-5: #313131;
+  --novaBlack-6: #3a3a3a;
+  --novaBlack-7: #484848;
+  --novaBlack-8: #606060;
+  --novaBlack-9: #6e6e6e;
+  --novaBlack-10: #7b7b7b;
+  --novaBlack-11: #b3b3b3;
+  --novaBlack-12: #eee;
+
+  --novaBlack-a1: #00000000;
+  --novaBlack-a2: #ffffff07;
+  --novaBlack-a3: #ffffff10;
+  --novaBlack-a4: #ffffff18;
+  --novaBlack-a5: #ffffff1f;
+  --novaBlack-a6: #ffffff29;
+  --novaBlack-a7: #ffffff38;
+  --novaBlack-a8: #ffffff52;
+  --novaBlack-a9: #ffffff62;
+  --novaBlack-a10: #ffffff70;
+  --novaBlack-a11: #ffffffad;
+  --novaBlack-a12: #ffffffed;
+
+  --novaBlack-contrast: #ffffff;
+  --novaBlack-surface: rgba(0, 0, 0, 0.05);
+  --novaBlack-indicator: #6e6e6e;
+  --novaBlack-track: #6e6e6e;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark,
+    .dark-theme {
+      --novaBlack-1: oklch(19.1% 0 none);
+      --novaBlack-2: oklch(22% 0 none);
+      --novaBlack-3: oklch(25.6% 0 none);
+      --novaBlack-4: oklch(28.4% 0 none);
+      --novaBlack-5: oklch(31.3% 0 none);
+      --novaBlack-6: oklch(34.9% 0 none);
+      --novaBlack-7: oklch(40% 0 none);
+      --novaBlack-8: oklch(49% 0 none);
+      --novaBlack-9: oklch(53.8% 0 none);
+      --novaBlack-10: oklch(58.4% 0 none);
+      --novaBlack-11: oklch(76.8% 0 none);
+      --novaBlack-12: oklch(94.8% 0 none);
+
+      --novaBlack-a1: color(display-p3 0 0 0 / 0);
+      --novaBlack-a2: color(display-p3 1 1 1 / 0.0255);
+      --novaBlack-a3: color(display-p3 1 1 1 / 0.0638);
+      --novaBlack-a4: color(display-p3 1 1 1 / 0.0936);
+      --novaBlack-a5: color(display-p3 1 1 1 / 0.1234);
+      --novaBlack-a6: color(display-p3 1 1 1 / 0.1617);
+      --novaBlack-a7: color(display-p3 1 1 1 / 0.2213);
+      --novaBlack-a8: color(display-p3 1 1 1 / 0.3234);
+      --novaBlack-a9: color(display-p3 1 1 1 / 0.383);
+      --novaBlack-a10: color(display-p3 1 1 1 / 0.4383);
+      --novaBlack-a11: color(display-p3 1 1 1 / 0.6766);
+      --novaBlack-a12: color(display-p3 1 1 1 / 0.9277);
+
+      --novaBlack-contrast: #ffffff;
+      --novaBlack-surface: color(display-p3 0 0 0 / 5%);
+      --novaBlack-indicator: oklch(53.8% 0 none);
+      --novaBlack-track: oklch(53.8% 0 none);
+    }
+  }
+}
