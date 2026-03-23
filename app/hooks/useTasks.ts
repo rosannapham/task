@@ -9,7 +9,7 @@ export function useTasks() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
+  const [accountingTask, setTask] = useState<Task>();
   const fetchTasks = async () => {
     try {
         setLoading(true);
@@ -26,8 +26,26 @@ export function useTasks() {
     }
   };
 
+  const fetchTask = async () => {
+    try {
+      const res = await fetch(`/api/tasks/accounting-tool-invite`);
+  
+      if (!res.ok) {
+        throw new Error('Failed to fetch task');
+      }
+  
+      const data = await res.json();
+      setTask(data.task.data);
+      console.log(accountingTask)
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
     fetchTasks();
+    fetchTask()
+   
   }, []);
 
   return {
@@ -35,5 +53,6 @@ export function useTasks() {
     loading,
     error,
     refetch: fetchTasks,
+    accountingTask
   };
 }

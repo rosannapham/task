@@ -4,7 +4,7 @@ import { useTasks } from '@/app/hooks/useTasks';
 import { TaskCard } from './TaskCard';
 
 export function TaskList() {
-  const { tasks, loading, error, refetch } = useTasks();
+  const { tasks, loading, error, refetch, accountingTask } = useTasks();
 
   if (loading) {
     return (
@@ -54,6 +54,8 @@ export function TaskList() {
         {tasks.map((task) => (
           <TaskCard key={task.id} task={task} />
         ))}
+        {accountingTask && <TaskCard key={123}  task={accountingTask} />}
+
       </div>
     </div>
   );
