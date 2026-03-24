@@ -2,9 +2,9 @@
 import { FullScreenModal } from "@/components/FullScreenModal";
 import { useAccountingToolInvitePage } from "./useAccounting-tool-invite";
 import { useRouter } from "next/navigation";
-import {  Callout, Card, Flex, IconButton, Select, Text, TextField } from "@radix-ui/themes";
+import {  Button, Callout, Card, Flex, IconButton, Radio, Select, Text, TextField } from "@radix-ui/themes";
 import { Box, ClipboardCopy, ClipboardCopyIcon } from "lucide-react";
-import { CopyIcon } from "@radix-ui/react-icons";
+import { BookmarkIcon, CopyIcon } from "@radix-ui/react-icons";
 
 
 
@@ -118,33 +118,11 @@ if (!task) return <></>
 </Flex>
 
     </Flex>
-    <Card variant="surface">
-		<Text as="div" size="2" weight="bold">
-			Quick start
-		</Text>
-		<Text as="div" color="gray" size="2">
-			Start building your next project in minutes
-		</Text>
-	</Card>
-  <Select.Root defaultValue="apple">
-	<Select.Trigger />
-	<Select.Content>
-		<Select.Group>
-			<Select.Label>Fruits</Select.Label>
-			<Select.Item value="orange">Orange</Select.Item>
-			<Select.Item value="apple">Apple</Select.Item>
-			<Select.Item value="grape" disabled>
-				Grape
-			</Select.Item>
-		</Select.Group>
-		<Select.Separator />
-		<Select.Group>
-			<Select.Label>Vegetables</Select.Label>
-			<Select.Item value="carrot">Carrot</Select.Item>
-			<Select.Item value="potato">Potato</Select.Item>
-		</Select.Group>
-	</Select.Content>
-</Select.Root>
+
+    <Button>
+	<BookmarkIcon /> Bookmark
+</Button>
+
   </FullScreenModal>
     
   }
