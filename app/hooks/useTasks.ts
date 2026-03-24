@@ -3,20 +3,25 @@
 import { useState, useEffect } from 'react';
 
 import { tasksApi } from '@/lib/api/tasks';
-import { Task } from '../types/task';
+import { PendingTasks, Task, TransformedPendingTasksApi } from '../types/task';
 
 export function useTasks() {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [pendingTasks, setPendingTasks] = useState<Partial<TransformedPendingTasksApi>>();
+  const [completedTasks, setCompletedTasks] = useState<Task[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [accountingTask, setTask] = useState<Task>();
-  const fetchTasks = async () => {
+
+
+  const fetchPendingTasks = async () => {
     try {
         setLoading(true);
       setError(null);
 
-      const data = await tasksApi.getAllTasks();
-      setTasks(data.tasks);
+      const data = await tasksApi.getPendingTasks();
+      setPendingTasks(data)
+      console.log(data)
+
 
     } catch (err) {
       setError('Failed to load tasks');
@@ -25,6 +30,22 @@ export function useTasks() {
       setLoading(false);
     }
   };
+
+  // const fetchCompletedTasks = async () => {
+  //   try {
+  //       setLoading(true);
+  //     setError(null);
+
+  //     const data = await tasksApi.getCompletedTasks();
+  //     setCompletedTasks(data.tasks);
+
+  //   } catch (err) {
+  //     setError('Failed to load tasks');
+  //     console.error('Error fetching tasks:', err);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   const fetchTask = async () => {
     try {
@@ -36,23 +57,25 @@ export function useTasks() {
   
       const data = await res.json();
       setTask(data.task.data);
-      console.log(accountingTask)
+  
     } catch (error) {
       console.error(error);
     }
   };
 
   useEffect(() => {
-    fetchTasks();
+    fetchPendingTasks();
+
     fetchTask()
    
   }, []);
 
   return {
-    tasks,
+    pendingTasks,
+    completedTasks,
     loading,
     error,
-    refetch: fetchTasks,
+    refetch: fetchPendingTasks,
     accountingTask
   };
 }

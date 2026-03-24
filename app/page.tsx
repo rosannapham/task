@@ -10,13 +10,14 @@ import Link from "next/link";
 import { Suspense } from "react";
 import Instruments from "./tasks/page";
 import "@radix-ui/themes/styles.css";
-import { TaskList } from "./tasks/TaskList";
+import { TaskList } from "../components/TaskList";
+import TasksPage from "./tasks/page";
 
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center">
-<TaskList/>
+<TasksPage/>
     </main>
   );
 }

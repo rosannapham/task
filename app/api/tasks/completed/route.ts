@@ -7,12 +7,11 @@ export async function GET() {
   try {
     const supabase = await createClient();
 
-    const { data: tasks, error } = await supabase
-    .from('tasks')
-      .select('*')
-      .eq('status', 'pending')
+      const { data: completedTasks, error } = await supabase
+      .from('tasks')
+      .select('*',  )
+      .eq('status', 'completed')
       .order('created_at', { ascending: false });
-
 
 
 
@@ -25,10 +24,9 @@ export async function GET() {
     }
 
     return NextResponse.json({
-      tasks: tasks ,
-      count: tasks?.length || 0,
+      tasks: completedTasks as Task[],
+      count: completedTasks?.length || 0,
     });
-    
 
   } catch (error) {
     console.error('Server error:', error);

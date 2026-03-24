@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Theme } from "@radix-ui/themes";
 import "./globals.css";
+import "./styling/colours.css";
+import "./styling/themes.css";
+import "@radix-ui/themes/styles.css";
+
+
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`

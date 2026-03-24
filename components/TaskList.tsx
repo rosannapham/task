@@ -4,7 +4,7 @@ import { useTasks } from '@/app/hooks/useTasks';
 import { TaskCard } from './TaskCard';
 
 export function TaskList() {
-  const { tasks, loading, error, refetch, accountingTask } = useTasks();
+  const { pendingTasks, completedTasks, loading, error, refetch, accountingTask } = useTasks();
 
   if (loading) {
     return (
@@ -28,7 +28,7 @@ export function TaskList() {
     );
   }
 
-  if (tasks.length === 0) {
+  if (pendingTasks?.tasks?.overdue && pendingTasks?.tasks?.overdue.length === 0) {
     return (
       <div className="text-center h-64 flex justify-center items-center">
         <div className="text-gray-600">No tasks found</div>
@@ -40,7 +40,7 @@ export function TaskList() {
     <div className="space-y-4">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold text-gray-900">
-          Tasks ({tasks.length})
+          pending Tasks ({pendingTasks?.taskCount})
         </h2>
         <button
           onClick={refetch}
@@ -51,10 +51,31 @@ export function TaskList() {
       </div>
 
       <div className="grid gap-4">
-        {tasks.map((task) => (
+        {pendingTasks?.tasks?.overdue && pendingTasks?.tasks?.overdue!!.map((task) => (
           <TaskCard key={task.id} task={task} />
         ))}
-        {accountingTask && <TaskCard key={123}  task={accountingTask} />}
+       
+
+      </div>
+      <div className="flex justify-between items-center">
+        <h2 className="text-2xl font-bold text-gray-900">
+          completed Tasks ({completedTasks.length})
+        </h2>
+        <button
+          onClick={refetch}
+          className="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 transition-colors"
+        >
+          Refresh
+        </button>
+      </div>
+
+      <div className="grid gap-4">
+        {completedTasks.map((task) => (
+          <TaskCard key={task.id} task={task} />
+        ))}
+        {accountingTask &&<>  <h2 className="text-2xl font-bold text-gray-900">
+          specific
+        </h2> <TaskCard key={123}  task={accountingTask} /></>}
 
       </div>
     </div>

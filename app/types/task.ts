@@ -9,3 +9,19 @@ export interface Task {
     completed_by: string
     task_name: string 
 }
+
+export interface PendingTasks {
+    overdue: Task[];
+    pendingSoon: Task[];
+    dueSoon: Task[];
+
+}
+
+export interface PendingTasksApiResponse {
+    tasks: PendingTasks;
+    taskCount: number;
+}
+export interface TransformedPendingTasksApi {
+    tasks: Partial<PendingTasks>;
+    taskCount: number;
+}
