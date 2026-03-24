@@ -1,4 +1,4 @@
-import { PendingTasks, Task } from '@/app/types/task';
+import { Tasks, Task } from '@/app/types/task';
 import { createClient } from '@/lib/supabase/server';
 import { NextResponse } from 'next/server';
 
@@ -29,7 +29,7 @@ export async function GET() {
     .select("*", { count: "exact", head: true });
     
   
-    const pendingTasks: PendingTasks = {
+    const pendingTasks: Tasks = {
         overdue: overdue || [],
         pendingSoon: pendingToday || [],
         dueSoon: dueSoon ||[]
@@ -40,7 +40,7 @@ export async function GET() {
         tasks: pendingTasks,
         taskCount: totalTasks || 0,
       });
-      
+
     } catch (error) {
       console.error("Server error:", error);
       return NextResponse.json(

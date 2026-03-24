@@ -73,7 +73,7 @@ export const tasksApi = {
       throw error
     }
   },
-  
+
   async getTaskBySlug(slug: string): Promise<Task> {
     try {
       const response = await fetch(`/api/tasks/${slug}`, {

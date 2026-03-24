@@ -3,13 +3,13 @@
 import { useState, useEffect } from 'react';
 
 import { tasksApi } from '@/lib/api/tasks';
-import { PendingTasks, Task,  } from '../types/task';
+import {Tasks, Task} from '../types/task';
 
 export function useTasks() {
-  const [completedTasks, setCompletedTasks] = useState<Task[]>([]);
+  const [completedTasks, setCompletedTasks] = useState<Tasks[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [accountingTask, setTask] = useState<Task>();
+  const [accountingTask, setTask] = useState<Tasks>();
 
 
   const fetchPendingTasks = async () => {
