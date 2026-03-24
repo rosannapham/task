@@ -7,44 +7,40 @@ export async function GET() {
     try {
       const supabase = await createClient();
   
-      const { data: tasks, error } = await supabase
-        .from("tasks")
-        .select("*")
-        .order("created_at", { ascending: false });
+      const today = new Date().toISOString().split("T")[0];
+
+    const { data: overdue } = await supabase
+    .from("tasks")
+    .select("*")
+    .lt("due_date", today);
+
+    const { data: pendingToday } = await supabase
+    .from("tasks")
+    .select("*")
+    .eq("due_date", today);
+
+    const { data: dueSoon } = await supabase
+    .from("tasks")
+    .select("*")
+    .gt("due_date", today)
+
+    const { count: totalTasks } = await supabase
+    .from("tasks")
+    .select("*", { count: "exact", head: true });
+    
   
-      if (error) {
-        console.error("Database error:", error);
-        return NextResponse.json(
-          { error: "Failed to fetch tasks" },
-          { status: 500 }
-        );
-      }
-      const today = new Date().toISOString().split("T")[0]
-  
-  const pendingTasks: PendingTasks = {
-     overdue:  [],
-     pendingSoon: [],
-     dueSoon:[]
-  }
+    const pendingTasks: PendingTasks = {
+        overdue: overdue || [],
+        pendingSoon: pendingToday || [],
+        dueSoon: dueSoon ||[]
+    }
       
-  
-      tasks?.forEach((task) => {
-  
-        const dueDate= task.due_date; 
-  
-        if (dueDate < today) {
-            pendingTasks.overdue.push(task);
-          } else if (dueDate === today) {
-            pendingTasks.pendingSoon.push(task);
-          } else if (dueDate > today) {
-            pendingTasks.dueSoon.push(task);
-          }
-        });
   
       return NextResponse.json({
         tasks: pendingTasks,
-        taskCount: tasks?.length || 0,
+        taskCount: totalTasks || 0,
       });
+      
     } catch (error) {
       console.error("Server error:", error);
       return NextResponse.json(

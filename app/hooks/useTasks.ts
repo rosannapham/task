@@ -3,10 +3,9 @@
 import { useState, useEffect } from 'react';
 
 import { tasksApi } from '@/lib/api/tasks';
-import { PendingTasks, Task, TransformedPendingTasksApi } from '../types/task';
+import { PendingTasks, Task,  } from '../types/task';
 
 export function useTasks() {
-  const [pendingTasks, setPendingTasks] = useState<Partial<TransformedPendingTasksApi>>();
   const [completedTasks, setCompletedTasks] = useState<Task[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -19,7 +18,6 @@ export function useTasks() {
       setError(null);
 
       const data = await tasksApi.getPendingTasks();
-      setPendingTasks(data)
       console.log(data)
 
 
@@ -71,7 +69,6 @@ export function useTasks() {
   }, []);
 
   return {
-    pendingTasks,
     completedTasks,
     loading,
     error,

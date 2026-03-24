@@ -1,40 +1,38 @@
-
+'use client';
 import { Task } from "@/app/types/task";
+import { TaskCategoryTag } from "./TaskCategoryTag";
+import dayjs from "dayjs";
+import { useRouter } from "next/navigation";
 
 
 interface TaskCardProps {
   task: Task;
+  isLast?: boolean;
 }
 
-export function TaskCard({ task }: TaskCardProps) {
+export function TaskCard({ task, isLast }: TaskCardProps) {
+  const router = useRouter()
   return (
-    <div className="border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+    <div
+    className={`p-4 hover:bg-gray-100 transition-colors duration-200 active:bg-gray-200 ${
+      !isLast ? "border-b border-gray-200" : ""}
+      ${isLast ? "rounded-b-lg" : ""}`}
+      onClick={() => {router.push(`/tasks/${task.slug}`)}}
+  >
       <div className="flex items-start justify-between">
         <div className="flex-1">
-          <h3
-            className={`text-lg font-medium ${
-              task.completed_at ? 'line-through text-gray-500' : 'text-gray-900'
-            }`}
-          >
+          <h3  className="font-[var(--font-weight-semibold)]">
             {task.task_name}
           </h3>
 
       
 
           <p className="text-sm text-gray-400 mt-2">
-            Created: {new Date(task.created_at).toLocaleDateString()}
+          {dayjs(task.due_date).format("DD MMMM YYYY")}
           </p>
         </div>
 
-        <span
-          className={`px-2 py-1 rounded-full text-xs font-medium ${
-            task.completed_at
-              ? 'bg-green-100 text-green-800'
-              : 'bg-yellow-100 text-yellow-800'
-          }`}
-        >
-          {task.completed_at ? 'Completed' : 'Pending'}
-        </span>
+        <TaskCategoryTag category={"task"} />
       </div>
     </div>
   );

@@ -11,7 +11,8 @@ export async function GET() {
     .from('tasks')
       .select('*')
       .eq('status', 'pending')
-      .order('created_at', { ascending: false });
+      .order('created_at', { ascending: false })
+      .limit(100)
 
 
 

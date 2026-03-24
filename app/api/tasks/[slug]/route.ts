@@ -22,10 +22,10 @@ export async function GET(
   
       const sanitizedSlug = slug.trim().toLowerCase();
   
-      const task = await supabase
+      const { data: task, error } = await supabase
       .from('tasks')
         .select('*')
-        .eq('slug', slug)
+        .eq('slug', sanitizedSlug)
         .single()
   
       if (!task) {
@@ -36,10 +36,7 @@ export async function GET(
       }
   
 
-      return NextResponse.json(
-        { message: 'Event fetched successfully', task },
-        { status: 200 }
-      );
+      return NextResponse.json( task );
     } catch (error) {
   
       if (error instanceof Error) {
